@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", serif;
 }
 
 .container {
@@ -12,23 +18,25 @@
     padding-right: 20px;
 }
 
-
-ul , li {
+ul,
+li {
     list-style: none;
 }
 
-a {
+.main__header-item-color {
     text-decoration: none;
+    color: black;
 }
 
 /* header  start*/
 
 .main__header {
     position: sticky;
-    border-bottom: 1px solid rgba(66, 68, 68, 0.541);
+    border-bottom: 1px solid #e6f3fe;
     margin-bottom: 100px;
     top: 0;
     background-color: #fff;
+    z-index: 100;
 }
 
 .header__box {
@@ -38,7 +46,7 @@ a {
     align-items: center;
 }
 
-.header__logo img{
+.header__logo img {
     width: 69px;
 }
 
@@ -58,7 +66,7 @@ a {
     width: 161px;
     height: 52px;
     color: white;
-    background-color: #0082F4;
+    background-color: #0082f4;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -85,7 +93,7 @@ main section {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 531px;
+    width: 500px;
 }
 
 .home__title {
@@ -99,7 +107,7 @@ main section {
 }
 
 .home__sub_title-blue {
-    color: #0082F4;
+    color: #0082f4;
 }
 
 .home__btn-block {
@@ -112,7 +120,7 @@ main section {
     font-size: 20px;
     border-radius: 7px;
     border: none;
-    background-color: #0082F4;
+    background-color: #0082f4;
     color: white;
     cursor: pointer;
 }
@@ -152,7 +160,7 @@ main section {
 }
 .about__title {
     font-size: 25px;
-    color: #0082F4;
+    color: #0082f4;
 }
 
 .about__sub_title {
@@ -170,8 +178,9 @@ main section {
     font-size: 20px;
     border-radius: 7px;
     border: none;
-    background-color: #0082F4;
+    background-color: #0082f4;
     color: white;
+    cursor: pointer;
 }
 
 /* about section end */
@@ -229,11 +238,248 @@ main section {
     border-radius: 50%;
     border: none;
     background-color: #0086fc1f;
-    color: #0086FC;
+    color: #0086fc;
     font-size: 18px;
     cursor: pointer;
 }
 
+.customers__item_box {
+    display: flex;
+    gap: 65px;
+    margin-top: 60px;
+}
+
+.customers__item {
+    display: flex;
+    width: 420px;
+    height: 283px;
+    border: 1px solid #e6f3fe;
+    border-radius: 5px;
+    gap: 60px;
+}
+
+.customers__item_left {
+    position: relative;
+    width: 60px;
+    height: 283px;
+    background-color: #0082f4;
+    border-radius: 5px 0 0 5px;
+}
+
+.customers__img img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.customers__img {
+    width: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+.customers__item_text {
+    width: 200px;
+    font-size: 20px;
+    opacity: 0.7;
+    font-weight: 400;
+    line-height: 150%;
+    color: #000;
+}
+
+.customers__item_title::before {
+    position: absolute;
+    content: "";
+    border: 2px solid #000;
+    width: 30px;
+    opacity: 0.7;
+    top: 73%;
+    right: 170px;
+}
+
+.customers__item_title {
+    margin-top: 40px;
+    font-size: 20px;
+    opacity: 0.9;
+    font-weight: 400;
+    line-height: 120%;
+    color: #000;
+}
+
+.customers__item_category {
+    font-size: 20px;
+    opacity: 0.5;
+    line-height: 120%;
+    color: #000;
+    font-weight: 400;
+}
+
+.customers__item_right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* customers section end */
 
-/* main end */  
+/* register section start */
+
+.register {
+    background-color: #e8ecff;
+    padding: 75px 0;
+}
+
+.register_block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.register__title {
+    font-weight: 500;
+    font-size: 31px;
+    text-align: center;
+    color: #058aff;
+}
+
+.register__sub_title {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    opacity: 0.7;
+}
+
+.register__input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 487px;
+    height: 82px;
+    border: 1px solid #058aff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.register__img {
+    width: 32px;
+}
+
+.register__input {
+    width: 280px;
+    height: 50px;
+    border: none;
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.register__btn {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0082f4;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* register section end */
+
+/* main end */
+
+/* footer start */
+
+.footer__block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+}
+
+.footer__img {
+    width: 70px;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer__item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000;
+    opacity: 0.7;
+}
+
+.footer__item-bold {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    color: #000;
+}
+
+/* footer bottom */
+
+.footer__bottom {
+    background: linear-gradient(
+        180deg,
+        #058aff 0%,
+        rgba(57, 55, 206, 0.87) 62.83%
+    );
+    padding: 34px 0;
+}
+
+.footer__bottom-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__item-box {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.footer__bottom_title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+}
+
+.footer_item-btn {
+    display: flex;
+    border-radius: 10px;
+    width: 131px;
+    height: 52px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer__item-btn-style {
+    font-weight: 400;
+    font-size: 20px;
+    color: #3c61e1;
+    text-decoration: none;
+}
+
+/* footer end */

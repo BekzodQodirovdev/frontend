@@ -13,14 +13,14 @@
                     <div class="header__logo">
                         <img src="./img/logo.png" alt="logo" />
                     </div>
+                    <ul class="main__header-list">
+                        <li class="main__header-item"><a class="main__header-item-color" href="#">Home</a></li>
+                        <li class="main__header-item"><a class="main__header-item-color" href="#about">About</a></li>
+                        <li class="main__header-item"><a class="main__header-item-color" href="#work">Services</a></li>
+                        <li class="main__header-item"><a class="main__header-item-color" href="#customers">Reviews</a></li>
+                    </ul>
+                    <button class="main__header-btn">Get Started</button>
                 </div>
-                <ul class="main__header-list">
-                    <li class="main__header-item">Home</li>
-                    <li class="main__header-item">About</li>
-                    <li class="main__header-item">Services</li>
-                    <li class="main__header-item">Reviews</li>
-                </ul>
-                <button class="main__header-btn">Get Started</button>
             </div>
         </header>
         <main>
@@ -32,8 +32,8 @@
                             <p class="home__sub_title">Connecting people is our <span class="home__sub_title-blue">business</span></p>
                             <p class="home__text">As a rule the organization settles on the inventive and media choices. Regularly it supplies supporting statistical.</p>
                             <div class="home__btn-block">
-                                <button>Get Started </button>
-                                <button><img src="./img/home_btn_play.svg" alt="play video"> Play Video</button>
+                                <button class="home_btn-1">Get Started </button>
+                                <button class="home_btn-2"><img src="./img/home_btn_play.svg" alt="play video"> Play Video</button>
                             </div>
                         </div>
                         <div class="home__box-right">
@@ -59,28 +59,28 @@
             </section>
             <section class="work">
                 <div class="container">
-                    <h2>How We Work</h2>
+                    <h2 class="work__title">How We Work</h2>
                     <div class="work__block">
                         <div class="work__item">
                             <div class="work__img">
                                 <img src="./img/work_img1.svg" alt="work img">
                             </div>
-                            <h3>Start Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
+                            <h3 class="work_sub_title">Start Design</h3>
+                            <p class="work_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
                         </div>
                         <div class="work__item">
                             <div class="work__img">
                                 <img src="./img/work_img2.svg" alt="work img">
                             </div>
-                            <h3>Go to Code</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
+                            <h3 class="work_sub_title">Go to Code</h3>
+                            <p class="work_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
                         </div>
                         <div class="work__item">
                             <div class="work__img">
                                 <img src="./img/work_img3.svg" alt="work img">
                             </div>
-                            <h3>Final Deliverd</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
+                            <h3 class="work_sub_title">Final Deliverd</h3>
+                            <p class="work_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra suscipit adipiscing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -119,20 +119,41 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="customers__item">
+                            <div class="customers__item_left">
+                                <div class="customers__img">
+                                    <img
+                                        src="./img/customer_img2.jpg"
+                                        alt="img"
+                                    />
+                                </div>
+                            </div>
+                            <div class="customers__item_right">
+                                <p class="customers__item_text">
+                                    I recently concluded a complete messaging
+                                    revamp for an exciting com
+                                </p>
+                                <h3 class="customers__item_title">
+                                    Leo Aminoff
+                                </h3>
+                                <p class="customers__item_category">
+                                    Product Designer
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="register">
                 <div class="container">
                     <div class="register_block">
-
-                        <h3>Sign Up to Our Newsletter</h3>
-                        <p>Yours could be one of them.</p>
-                        <span>
-                            <input type="text">
-                            <img src="./img/mail.svg" alt="mail img">
-                            <button>Send</button>
-                        </span>
+                        <h3 class="register__title">Sign Up to Our Newsletter</h3>
+                        <p class="register__sub_title">Yours could be one of them.</p>
+                        <div class="register__input_box">
+                            <img class="register__img" src="./img/mail.svg" alt="mail img">
+                            <input class="register__input" type="email" placeholder="Enter your email">
+                            <button class="register__btn">Send</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -142,41 +163,46 @@
                 <div class="container">
                     <div class="footer__block">
                         <ul class="footer__list">
-                            <li class="footer__item"><img src="./img/logo.png" alt="logo"></li>
+                            <li><img class="footer__img" src="./img/logo.png" alt="logo"></li>
                             <li class="footer__item">Smart business</li>
                             <li class="footer__item">Community</li>
                         </ul>
                         <ul class="footer__list">
-                            <li class="footer__item-bold">Resources</li>
+                            <li class="footer__item footer__item-bold">Resources</li>
                             <li class="footer__item">Start Business</li>
                             <li class="footer__item">Digital Marketing</li>
                             <li class="footer__item">Course Creation</li>
                             <li class="footer__item">Business Accelerator</li>
                         </ul>
                         <ul class="footer__list">
-                            <li class="footer__item-bold">Mission</li>
+                            <li class="footer__item footer__item-bold">Mission</li>
                             <li class="footer__item">About Digital Analyst</li>
                             <li class="footer__item">Team</li>
                             <li class="footer__item">Become a Partner</li>
                             <li class="footer__item">Privacy Policy</li>
                         </ul>
                         <ul class="footer__list">
-                            <li class="footer__item-bold">Contact</li>
+                            <li class="footer__item footer__item-bold">Contact</li>
                             <li class="footer__item">041-774073</li>
                             <li class="footer__item">hello@digitalanalyst.org</li>
                             <li class="footer__item">Contact Form</li>
                         </ul>
                     </div>
-                    <div class="footer__bottom">
+                    </div>
+            </section>
+            <section class="footer__bottom">
+                <div class="container">
+                    <div class="footer__bottom-box">
                         <p class="footer__bottom_title">© 2021 DigitalAnalyst.org. A 50 non-profit organization. EIN: -3410655</p>
-                        <ul >
-                            <li class="footer_item_network"><img src="./img/facebook.svg" alt="social network"></li>
-                            <li class="footer_item_network"><img src="./img/twitter.svg" alt="social network"></li>
-                            <li class="footer_item_network"><img src="./img/youtube.svg" alt="social network"></li>
-                            <li class="footer_item_network"><img src="./img/instagram.svg" alt="social network"></li>
-                            <li class="footer_item-btn"><a href="#">Sign Up</a></li>
+                        <ul class="footer__item-box">
+                            <li class="footer_item_network"><a href="#"><img src="./img/facebook.svg" alt="social network"></a></li>
+                            <li class="footer_item_network"><a href="#"><img src="./img/twitter.svg" alt="social network"></a></li>
+                            <li class="footer_item_network"><a href="#"><img src="./img/youtube.svg" alt="social network"></a></li>
+                            <li class="footer_item_network"><a href="#"><img src="./img/instagram.svg" alt="social network"></a></li>
+                            <li class="footer_item-btn"><a class="footer__item-btn-style" href="#">Sign Up</a></li>
                         </ul>
                     </div>
+
                 </div>
             </section>
         </footer>
