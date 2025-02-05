@@ -1,0 +1,37 @@
+.hero__block {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero {
+    padding-bottom: 140px;
+}
+
+.hero__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 117%;
+    color: #000;
+    padding-bottom: 25px;
+}
+
+.hero__text {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 152%;
+    color: #7d7987;
+    padding-bottom: 25px;
+}
+
+.hero__btn {
+    padding: 18px 50px;
+    border-radius: 55px;
+    border: 1px solid #458ff6;;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 111%;
+    color: #458ff6;
+    cursor: pointer;
+}

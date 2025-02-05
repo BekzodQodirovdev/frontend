@@ -1,0 +1,26 @@
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.header__list {
+    display: flex;
+    gap: 40px;
+}
+
+.selected {
+    font-weight: 700;
+    font-size: 18px;
+    color: #1f1534;
+}
+
+.header__item {
+    font-weight: 400;
+    font-size: 18px;
+    color: #8F8A99;
+}
+
+.header {
+    padding-bottom: 70px;
+}

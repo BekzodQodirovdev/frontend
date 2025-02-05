@@ -1,0 +1,48 @@
+.mobile_app {
+    padding-bottom: 200px;
+}
+
+.mobile__app_block {
+    display: flex;
+    gap: 70px;
+}
+
+.mobile__app_deckription {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mobile_app_title {
+    width: 254px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 133%;
+    color: #000;
+}
+
+.mobile_app_line {
+    border-radius: 6px;
+    width: 56px;
+    height: 2px;
+    background: #000;
+}
+
+.mobile_app_text {
+    width: 420px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 167%;
+    color: #7d7987;
+}
+
+.mobile_app_btn {
+    width: 200px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #458ff6;
+    background-color: transparent;
+    border-radius: 55px;
+    border: 1px solid #458ff6;
+}

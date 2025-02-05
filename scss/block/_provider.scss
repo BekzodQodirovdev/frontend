@@ -1,0 +1,47 @@
+.provider {
+    padding-top: 150px;
+    padding-bottom: 220px;
+}
+
+.provider__block {
+    display: flex;
+    gap: 135px;
+}
+
+.provider__deckription_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 26px;
+}
+
+.provider__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 156%;
+    color: #000;
+}
+
+.provider__line {
+    border-radius: 10px;
+    width: 56px;
+    height: 2px;
+    background: #000;
+}
+
+.provider__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 167%;
+    color: #7d7987;
+}
+
+.provider__btn {
+    width: 200px;
+    height: 56px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #458ff6;
+    border: 1px solid #458ff6;
+    border-radius: 55px;
+}
