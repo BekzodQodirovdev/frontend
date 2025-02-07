@@ -1,0 +1,24 @@
+.start {
+    background-color: #f67e7e;
+    background-image: url("../imgs/start_bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom -100px left;
+    background-size: 200px;
+}
+
+.start__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 76px 0;
+}
+
+.start__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    color: #012f34;
+}
+
+.start__btn {
+    @include btn(#000, #000);
+}

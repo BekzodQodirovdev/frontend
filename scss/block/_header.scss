@@ -1,0 +1,32 @@
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    padding: 77px 0;
+}
+
+.header__link_block {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.header__logo {
+    width: 160px;
+}
+
+.header__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.header__item {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: #fff;
+}
+
+.header__btn {
+    @include btn(#fff,#fff);
+}

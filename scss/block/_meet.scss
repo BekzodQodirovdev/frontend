@@ -1,0 +1,89 @@
+.meet {
+    padding-top: 140px;
+    background-color: #004047;
+    padding-bottom: 140px;
+    background-image: url("../imgs/meet_bg.png"), url("../imgs/meet_bg2.png");
+    background-repeat: no-repeat;
+    background-position: top left -100px,right bottom;
+    background-size: 200px,147px;
+}
+
+.meet__title {
+    align-items: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 65px;
+}
+
+.meet__item_img {
+    width: 96px;
+    padding-bottom: 16px;
+}
+
+.meet__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 2fr));
+    gap: 30px;
+}
+
+.meet__item {
+    position: relative;
+    text-align: center;
+    background: #012f34;
+    margin-bottom: 75px;
+}
+
+.meet__item_name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: center;
+    color: #79c8c7;
+}
+
+.meet__item_sub_title {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 167%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 55px;
+}
+
+.meet__btn {
+    width: 80px;
+    height: 80px;
+    background-color: #ff8686;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+.meet__btn::before,
+.meet__btn::after {
+    content: "";
+    position: absolute;
+    background-color: #004047;
+}
+
+.meet__btn::before {
+    width: 40%;
+    height: 10%;
+}
+
+.meet__btn::after {
+    width: 10%;
+    height: 40%;
+}

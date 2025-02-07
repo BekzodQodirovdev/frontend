@@ -1,0 +1,39 @@
+.about {
+    padding-top: 120px;
+    background-image: url("../imgs/hero_bg.png");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: right -100px bottom;
+    padding-bottom: 120px;
+}
+
+.about__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 156%;
+    color: #fff;
+}
+
+.about__content {
+    width: 730px;
+    height: 156px;
+}
+
+.about__line {
+    width: 50px;
+    height: 4px;
+    background-color: #f67e7e;
+}
+
+.about__text {
+    padding-top: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: #fff;
+}
