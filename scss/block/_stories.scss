@@ -1,0 +1,110 @@
+.stories {
+    padding-top: 140px;
+    padding-bottom: 164px;
+    background-color: #004047;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/stories_bg.svg"),
+        url("../../imgs/stories_bg2.svg");
+    background-position: top left, right bottom;
+}
+
+.stories__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 48px;
+}
+
+.stories__title-color {
+    color: #79c8c7;
+}
+
+.stories__list {
+    margin-top: 48px;
+}
+
+.stories__item:not(:last-child) {
+    margin-bottom: 48px;
+}
+.stories__item_bg_box {
+    padding-top: 36px;
+    background-repeat: no-repeat;
+    background-image: url("../imgs/stories_item_bg.svg");
+    background-position: top center;
+}
+
+.stories_item_text {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 167%;
+    text-align: center;
+    color: #fff;
+}
+
+.stories__item_name {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: center;
+    color: #79c8c7;
+}
+.stories__sup_text {
+    margin-top: 2px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    text-align: center;
+    color: #fff;
+}
+
+.stories__img_box {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.stories__img_box img {
+    width: 62px;
+}
+
+@media screen and (min-width: 768px) {
+    .stories__block {
+        max-width: 573px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .stories__title {
+        max-width: 465px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .stories {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .stories__block {
+        max-width: 100%;
+    }
+    .stories__title {
+        max-width: 625px;
+        margin-bottom: 56px;
+    }
+    .stories {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+    .stories__list {
+        display: flex;
+        gap: 30px;
+        margin: 0;
+    }
+    .stories__item:not(:last-child) {
+        margin-bottom: 0;
+    }
+}

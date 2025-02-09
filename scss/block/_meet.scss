@@ -1,0 +1,113 @@
+.meet {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    background-color: #004047;
+    background-image: url("../imgs/meet_bg.svg"), url("../imgs/meet_bg2.svg");
+    background-repeat: no-repeat;
+    background-position: top -100px left, right bottom;
+}
+
+.meet__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 48px;
+}
+
+.meet__item_img {
+    width: 96px;
+    padding-bottom: 16px;
+    padding-top: 32px;
+}
+
+.meet__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(327px, 2fr));
+    gap: 30px;
+}
+
+.meet__item {
+    position: relative;
+    text-align: center;
+    background: #012f34;
+    margin-bottom: 75px;
+}
+
+.meet__item_name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: center;
+    color: #79c8c7;
+}
+
+.meet__item_sub_title {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 167%;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 55px;
+}
+
+.meet__btn {
+    width: 80px;
+    height: 80px;
+    background-color: #ff8686;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+.meet__btn::before,
+.meet__btn::after {
+    content: "";
+    position: absolute;
+    background-color: #004047;
+}
+
+.meet__btn::before {
+    width: 40%;
+    height: 10%;
+}
+
+.meet__btn::after {
+    width: 10%;
+    height: 40%;
+}
+
+@media screen and (min-width: 768px) {
+    .meet {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-position: top left, right bottom;
+    }
+    .meet__block {
+        grid-template-columns: repeat(auto-fill, minmax(281px, 2fr));
+        gap: 11px;
+    }
+    .meet__item {
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .meet__title {
+        font-size: 48px;
+    }
+    .meet__block {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+        gap: 30px;
+    }
+}
