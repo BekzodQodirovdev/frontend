@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Todo</title>
+</head>
+<body>
+    <header>
+        <div class="btn_block">
+            <div class="btn">
+                <div class="btn__indicator">
+                  </div>
+                </div>
+              </div>
+        </div>
+    </header>
+    <main class="todo">
+        <div class="container">
+            <form>
+                <div class="todo__block">
+                    <div class="todo_input_box">
+                        <label for="title">Title</label>
+                        <input class="inputs" type="text" name="title" id="title" required>
+                    </div>
+                    <div class="todo_input_box">
+                        <label for="description">Description</label>
+                        <input class="inputs" type="text" name="description" id="description" required>
+                    </div>
+                    <div class="todo__btn_block">
+                        <button class="add_btn" type="submit">Add</button>
+                        <button class="reset_btn" type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+            <div class="box"></div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
