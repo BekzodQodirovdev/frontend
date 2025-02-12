@@ -1,0 +1,51 @@
+.slider__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #242d52;
+    padding-bottom: 60px;
+}
+
+.slider__card {
+    display: flex;
+    padding-bottom: 53px;
+    gap: 30px;
+}
+
+.card__box {
+    position: relative;
+    text-align: center;
+    background-color: #fafafa;
+    padding: 60px 40px 40px 40px;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #242d52;
+}
+
+.card__sub_title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center;
+    color: #242d52;
+    max-width: 460px;
+}
+
+.card_img_box img {
+    position: absolute;
+    width: 72px;
+    top: -36px;
+    margin-left: -36px;
+}
+
+.slider__box {
+    text-align: center;
+    padding-bottom: 161px;
+}

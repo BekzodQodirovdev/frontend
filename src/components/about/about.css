@@ -1,0 +1,58 @@
+.about__fn_box {
+    display: flex;
+    gap: 28px;
+}
+.about__fn_btn {
+    background-color: #f3603c;
+    border-radius: 39px;
+    width: 67px;
+    height: 39px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+    border: none;
+}
+
+.about_fn_title {
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #242d52;
+}
+
+.about_fn_sub_title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: #9196a8;
+}
+
+.about__block {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 165px;
+}
+
+.about__left_block {
+    max-width: 445px;
+}
+
+.about__right_block {
+    max-width: 540px;
+}
+.about__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #242d52;
+}
+
+.about__sub_title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: #9196a8;
+}

@@ -1,0 +1,23 @@
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.header__logo_block {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.header__list {
+    display: flex;
+    gap: 32px;
+}
+
+.header__item a {
+    font-weight: 500;
+    font-size: 13px;
+    color: #242d52;
+}
