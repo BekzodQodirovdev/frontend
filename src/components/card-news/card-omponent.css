@@ -1,0 +1,32 @@
+.card_comp__title {
+    padding-top: 18px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #11142d;
+    padding-bottom: 10px;
+}
+
+.card_comp__sub_title {
+    padding-bottom: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3f51b5;
+}
+
+.card_comp__status_box {
+    width: 239px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+.card_comp__star {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card_comp_hugs {
+    display: flex;
+    gap: 16px;
+}

@@ -1,0 +1,45 @@
+.card {
+    padding-top: 64px;
+}
+
+.card__title_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.card__pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow {
+    width: 32px;
+    height: 32px;
+    background-color: #eef2ff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    background-color: #eef2ff;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #3b82f6;
+}
+
+.card__news {
+    display: flex;
+    gap: 24px;
+}
