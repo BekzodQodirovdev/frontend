@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.MuiContainer-root {
+    max-width: 1323px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
