@@ -1,4 +1,4 @@
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating, show }) => {
     return (
         <div className="flex items-center gap-2">
             {[...Array(5)].map((_, index) => {
@@ -7,7 +7,7 @@ const StarRating = ({ rating }) => {
                     <button
                         type="button"
                         key={index}
-                        className="bg-transparent p-0 cursor-pointer"
+                        className="bg-transparent p-0"
                         aria-label={`${ratingValue} yulduz`}
                     >
                         <span
@@ -22,7 +22,7 @@ const StarRating = ({ rating }) => {
                     </button>
                 );
             })}
-            {rating > 0 && (
+            {!show && rating > 0 && (
                 <span className="text-gray-600 ml-2">{rating}/5</span>
             )}
         </div>

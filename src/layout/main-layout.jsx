@@ -14,7 +14,7 @@ export const MainLayout = () => {
                     <Outlet />
                 </main>
             </div>
-            <footer>
+            <footer className="bg-light-grey">
                 <Footer />
             </footer>
         </div>

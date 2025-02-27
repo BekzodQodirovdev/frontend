@@ -6,6 +6,14 @@ import { PradaPartner } from "../../assets/partners/prada";
 import { CalvinPartner } from "../../assets/partners/calvin";
 import { ArrivalsCard } from "./components/arrivals-card";
 
+import topLeft from "../../assets/dress-style/top-left.png";
+import topRight from "../../assets/dress-style/top-right.png";
+import bottmonLeft from "../../assets/dress-style/bottm-left.png";
+import bottmonRight from "../../assets/dress-style/bottmon-right.png";
+import { LeftIcon } from "../../assets/left";
+import { RightIcon } from "../../assets/right";
+import { CustomersCard } from "./components/customers-card";
+
 export const Home = () => {
     return (
         <>
@@ -87,6 +95,78 @@ export const Home = () => {
                     <button className="py-[15px] px-[80px] rounded-[62px] border border-gray cursor-pointer">
                         View All
                     </button>
+                </div>
+            </section>
+            {/* <section className="pt-[80px]">
+                <div className="container">
+                    <div className="bg-light-grey rounded-[40px]">
+                        <h3 className="text-center font-bold text-[48px] text-black pt-[70px] pb-[64px]">
+                            BROWSE BY dress STYLE
+                        </h3>
+                        <div className="grid grid-cols-2 px-[64px] pb-[76px]">
+                            <div className="relative h-[289px] w-[407px]">
+                                <img
+                                    src={topLeft}
+                                    alt="Casual"
+                                    className="w-full"
+                                />
+                                <span className="absolute top-[25px] left-[36px] font-bold text-[36px]">
+                                    Casual
+                                </span>
+                            </div>
+                            <div className="relative w-[684px] h-[289px]">
+                                <img
+                                    src={topRight}
+                                    alt="Formal"
+                                    className="w-full"
+                                />
+                                <span className="absolute top-[25px] left-[36px] font-bold text-[36px]">
+                                    Formal
+                                </span>
+                            </div>
+                            <div className="relative w-[684px] h-[289px]">
+                                <img
+                                    src={topRight}
+                                    alt="Party"
+                                    className="w-full"
+                                />
+                                <span className="absolute top-[25px] left-[36px] font-bold text-[36px]">
+                                    Party
+                                </span>
+                            </div>
+                            <div className="relative"></div>
+                        </div>
+                    </div>
+                </div>
+            </section> */}
+            <section className="pt-[80px]">
+                <div className="container">
+                    <div className="flex justify-between items-center">
+                        <h3 className="font-bold text-[48px]">
+                            OUR HAPPY CUSTOMERS
+                        </h3>
+                        <div className="flex gap-[16px]">
+                            <LeftIcon />
+                            <RightIcon />
+                        </div>
+                    </div>
+                    <div className="flex gap-[20px] pt-[40px] pb-[80px]">
+                        <CustomersCard
+                            star={5}
+                            title="Sarah M."
+                            sub_title={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”`}
+                        />
+                        <CustomersCard
+                            star={5}
+                            title="Sarah M."
+                            sub_title={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”`}
+                        />
+                        <CustomersCard
+                            star={5}
+                            title="Sarah M."
+                            sub_title={`"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”`}
+                        />
+                    </div>
                 </div>
             </section>
         </>
