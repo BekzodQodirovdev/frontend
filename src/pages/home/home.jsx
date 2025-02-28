@@ -13,6 +13,7 @@ import bottmonRight from "../../assets/dress-style/bottmon-right.png";
 import { LeftIcon } from "../../assets/left";
 import { RightIcon } from "../../assets/right";
 import { CustomersCard } from "./components/customers-card";
+import { newArrivals, topSelling } from "./data/data";
 
 export const Home = () => {
     return (
@@ -71,10 +72,9 @@ export const Home = () => {
                         NEW ARRIVALS
                     </h2>
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(295px,1fr))] w-[100%] place-items-center gap-4 pb-[36px]">
-                        <ArrivalsCard />
-                        <ArrivalsCard />
-                        <ArrivalsCard />
-                        <ArrivalsCard />
+                        {newArrivals?.map((item) => (
+                            <ArrivalsCard key={item.id} {...item} />
+                        ))}
                     </div>
                     <button className="py-[15px] px-[80px] rounded-[62px] border border-gray cursor-pointer">
                         View All
@@ -87,10 +87,9 @@ export const Home = () => {
                         top selling
                     </h2>
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(295px,1fr))] w-[100%] place-items-center gap-4 pb-[36px]">
-                        <ArrivalsCard />
-                        <ArrivalsCard />
-                        <ArrivalsCard />
-                        <ArrivalsCard />
+                        {topSelling?.map((item) => (
+                            <ArrivalsCard key={item.id} {...item} />
+                        ))}
                     </div>
                     <button className="py-[15px] px-[80px] rounded-[62px] border border-gray cursor-pointer">
                         View All

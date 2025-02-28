@@ -7,9 +7,9 @@ import { ProfileIcon } from "../../assets/header/profile";
 export const Search = () => {
     return (
         <div className="flex items-center gap-[40px]">
-            <div>
+            <Link to={"/"}>
                 <img src={logo} alt="img" />
-            </div>
+            </Link>
             <div className="flex gap-[24px]">
                 <Link to={"/"}>Shop</Link>
                 <Link to={"/"}>On Sale</Link>

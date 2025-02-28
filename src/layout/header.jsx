@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <div>
             <div className="py-[10px] relative text-center bg-primary">
-                <p className="text-white">
+                <div className="text-white">
                     Sign up and get 20% off to your first order.{" "}
                     <Link to={"/"} className="underline">
                         Sign Up Now
@@ -15,7 +15,7 @@ export const Header = () => {
                     <div className="absolute right-[100px] top-[15px]">
                         <CloseIcon />
                     </div>
-                </p>
+                </div>
             </div>
             <div className="container flex gap-[40px] py-[24px]">
                 <div className="grow">

@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="container relative">
             <div className="bg-black py-[36px] px-[64px] rounded-[20px] w-full">
                 <div className="flex justify-between">
-                    <h4 className="text-white">
+                    <h4 className="text-white font-bold text-[40px] max-w-[551px]">
                         STAY UPTO DATE ABOUT OUR LATEST OFFERS
                     </h4>
                     <div className="flex flex-col gap-[14px]">
@@ -70,7 +70,7 @@ export const Footer = () => {
                     <li>Youtube Playlist</li>
                 </ul>
             </div>
-            <div className="h-[2px] bg-light-grey w-full pt-[50px] pb-[25px]"></div>
+            <div className="h-[2px] bg-[#d8d8d8] w-full mt-[50px] mb-[25px]"></div>
             <p className="pb-[88px]">
                 Shop.co © 2000-2023, All Rights Reserved
             </p>
