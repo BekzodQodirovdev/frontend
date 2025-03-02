@@ -87,8 +87,8 @@ export const Home = () => {
                         top selling
                     </h2>
                     <div className="grid grid-cols-[repeat(auto-fit,minmax(295px,1fr))] w-[100%] place-items-center gap-4 pb-[36px]">
-                        {topSelling?.map((item) => (
-                            <ArrivalsCard key={item.id} {...item} />
+                        {topSelling?.map((item2) => (
+                            <ArrivalsCard key={item2.id} {...item2} />
                         ))}
                     </div>
                     <button className="py-[15px] px-[80px] rounded-[62px] border border-gray cursor-pointer">

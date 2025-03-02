@@ -3,8 +3,11 @@ import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { BasketIcon } from "../../assets/header/basket";
 import { ProfileIcon } from "../../assets/header/profile";
+import { useSelector } from "react-redux";
 
 export const Search = () => {
+    const { productCount } = useSelector((state) => state.product);
+
     return (
         <div className="flex items-center gap-[40px]">
             <Link to={"/"}>
@@ -23,8 +26,15 @@ export const Search = () => {
                 />
             </div>
             <div className="flex gap-[14px]">
-                <div className="cursor-pointer">
-                    <BasketIcon />
+                <div className="cursor-pointer relative">
+                    <Link to={"/card"}>
+                        <BasketIcon />
+                    </Link>
+                    {productCount ? (
+                        <p className="w-[10px] h-[10px] rounded-[50%] absolute bg-red-500 top-[-8px] right-0"></p>
+                    ) : (
+                        ""
+                    )}
                 </div>
                 <div className="cursor-pointer">
                     <ProfileIcon />

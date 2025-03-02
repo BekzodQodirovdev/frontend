@@ -24,10 +24,10 @@ export const ArrivalsCard = ({
             </h4>
             <StarRating rating={star} />
             <div className="flex gap-[10px] pt-[8px] items-center">
-                <p className="text-start font-bold text-[24px]">{price}</p>
+                <p className="text-start font-bold text-[24px]">$ {price}</p>
                 {old_price ? (
                     <p className="line-through font-bold text-[24px] text-gray">
-                        {old_price}
+                        $ {old_price}
                     </p>
                 ) : (
                     ""
