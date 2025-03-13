@@ -26,7 +26,7 @@ export const ProductCard = ({
             <p className="text-center font-semibold text-lg text-green-600">
                 {product.price} W
             </p>
-            <button className="w-full mt-2 bg-green-500 text-white py-2 rounded-md hover:bg-green-600 cursor-pointer">
+            <button className="w-full mt-2 bg-[#F3F3F3] text-black py-2 rounded-md hover:bg-[#019e7f] cursor-pointer">
                 Qo‘shish
             </button>
         </div>

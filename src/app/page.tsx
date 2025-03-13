@@ -10,7 +10,12 @@ export default function Home() {
                     <Sidebar />
                     <div className="flex-1 p-6">
                         <Banner />
-                        <ProductList />
+                        <div>
+                            <p className="text-[32px] font-bold pt-[28px] pb-[36px]">
+                                Yangi
+                            </p>
+                            <ProductList />
+                        </div>
                     </div>
                 </div>
             </div>

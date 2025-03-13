@@ -19,6 +19,24 @@ const products = [
         price: "7,040",
         image: "/limon.png",
     },
+    {
+        name: "Fanta",
+        description: "Qoy bo‘yin (muzzlatilgan)",
+        price: "7,040",
+        image: "/fanta.png",
+    },
+    {
+        name: "Go‘sht",
+        description: "Halal go‘sht",
+        price: "7,040",
+        image: "/meat.png",
+    },
+    {
+        name: "Limon",
+        description: "Nordon",
+        price: "7,040",
+        image: "/limon.png",
+    },
 ];
 
 export const ProductList = () => {
