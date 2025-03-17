@@ -1,17 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
     return (
-        <header>
+        <header className="border-b-2 border-gray-200">
             <div className="container">
                 <div className="py-[20px] flex  justify-between items-center">
                     <div className="pr-[50px]">
-                        <Image
-                            src="/logo.svg"
-                            alt="logo"
-                            width={110}
-                            height={53}
-                        />
+                        <Link href={"/"}>
+                            <Image
+                                src="/logo.svg"
+                                alt="logo"
+                                width={110}
+                                height={53}
+                                className="cursor-pointer"
+                            />
+                        </Link>
                     </div>
                     <div className="flex-1">
                         <div className="relative">
@@ -51,9 +55,11 @@ export const Header = () => {
                                 className="cursor-pointer"
                             />
                         </div>
-                        <button className="py-[11px] pl-[40px] pr-[13px] text-[13px] font-bold text-[#019e7f] border border-[#019e7f] rounded-[6px] cursor-pointer">
-                            Payme
-                        </button>
+                        <Link href={"/payment"}>
+                            <button className="py-[11px] pl-[40px] pr-[13px] text-[13px] font-bold text-[#019e7f] border border-[#019e7f] rounded-[6px] cursor-pointer">
+                                Payme
+                            </button>
+                        </Link>
                     </div>
                     <div className="relative ml-[21px]">
                         <select className="flex items-center gap-2 border border-gray-300 px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition text-teal-600 font-medium cursor-pointer">
