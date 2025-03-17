@@ -1,37 +1,43 @@
 import { ProductCard } from "./card";
 
-const products = [
+export const products = [
     {
+        id: 1,
         name: "Fanta",
         description: "Qoy bo‘yin (muzzlatilgan)",
         price: "7,040",
         image: "/fanta.png",
     },
     {
+        id: 2,
         name: "Go‘sht",
         description: "Halal go‘sht",
         price: "7,040",
         image: "/meat.png",
     },
     {
+        id: 3,
         name: "Limon",
         description: "Nordon",
         price: "7,040",
         image: "/limon.png",
     },
     {
+        id: 4,
         name: "Fanta",
         description: "Qoy bo‘yin (muzzlatilgan)",
         price: "7,040",
         image: "/fanta.png",
     },
     {
+        id: 5,
         name: "Go‘sht",
         description: "Halal go‘sht",
         price: "7,040",
         image: "/meat.png",
     },
     {
+        id: 6,
         name: "Limon",
         description: "Nordon",
         price: "7,040",

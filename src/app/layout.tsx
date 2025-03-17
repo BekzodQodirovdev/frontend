@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer/footer";
 import { Header } from "@/components/header/header";
+import { Providers } from "@/store/providers";
 
 const geistSans = Lato({
     variable: "--font-geist-sans",
@@ -23,13 +24,15 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${geistSans.variable} antialiased`}>
-                <div className="min-h-screen flex justify-between flex-col">
-                    <div>
-                        <Header />
-                        <div>{children}</div>
+                <Providers>
+                    <div className="min-h-screen flex justify-between flex-col">
+                        <div>
+                            <Header />
+                            <div>{children}</div>
+                        </div>
+                        <Footer />
                     </div>
-                    <Footer />
-                </div>
+                </Providers>
             </body>
         </html>
     );

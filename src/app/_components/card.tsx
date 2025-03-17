@@ -1,17 +1,55 @@
+"use client";
+
 import Image from "next/image";
+import heartImg from "../../../public/heart.svg";
+import heartImgFill from "../../../public/heartFill.svg";
+
+import { addHeart, delHeart } from "@/store/slices/heartSlice";
+import { useAppDispatch, useAppSelector } from "@/store";
+import React from "react";
+import { Spinner } from "./spiner";
 
 export const ProductCard = ({
     product,
 }: {
     product: {
+        id: number;
         image: string;
         name: string;
         description: string;
         price: string;
     };
 }) => {
+    const heartData = useAppSelector((state) => state.heart.data);
+    const dispatch = useAppDispatch();
+    const [isLoaded, setIsLoaded] = React.useState(false);
+
+    React.useEffect(() => {
+        setIsLoaded(true);
+    }, []);
+
+    if (!isLoaded) return <Spinner />;
+
+    const findId = heartData.find((item) => item.id == product.id);
     return (
         <div className="border p-4 rounded-lg shadow-sm hover:shadow-md transition bg-white">
+            <div className="cursor-pointer">
+                {findId ? (
+                    <Image
+                        src={heartImgFill}
+                        alt="heart icon"
+                        width={25}
+                        onClick={() => dispatch(delHeart({ id: product.id }))}
+                    />
+                ) : (
+                    <Image
+                        src={heartImg}
+                        alt="heart icon"
+                        width={25}
+                        onClick={() => dispatch(addHeart({ id: product.id }))}
+                    />
+                )}
+            </div>
             <Image
                 src={product.image}
                 alt={product.name}
