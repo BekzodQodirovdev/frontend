@@ -1,23 +1,24 @@
 import { HttpException, Injectable } from '@nestjs/common';
-import { CreateAddressDto } from './dto/create-address.dto';
-import { UpdateAddressDto } from './dto/update-address.dto';
+import { CreateOrderDto } from './dto/create-order.dto';
+import { UpdateOrderDto } from './dto/update-order.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Address } from 'src/core/enttity/address.entity';
 import { Repository } from 'typeorm';
-import { UpdateCategoryDto } from '../category/dto/update-category.dto';
+import { Order } from 'src/core/enttity/order.entity';
 
 @Injectable()
-export class AddressService {
+export class OrderService {
   constructor(
-    @InjectRepository(Address) private readonly repository: Repository<Address>,
+    @InjectRepository(Order)
+    private readonly repository: Repository<Order>,
   ) {}
-  async create(createAddressDto: CreateAddressDto) {
-    const createAddress = this.repository.create(createAddressDto);
-    const saveAddress = await this.repository.save(createAddress);
+
+  async create(createOrderDto: CreateOrderDto) {
+    const createPrd = this.repository.create(createOrderDto);
+    const saveProduct = await this.repository.save(createPrd);
     return {
       status_code: 201,
       message: 'success',
-      saveAddress,
+      data: saveProduct,
     };
   }
 
@@ -47,10 +48,10 @@ export class AddressService {
     };
   }
 
-  async update(id: string, updateAddressDto: UpdateAddressDto) {
+  async update(id: string, updateOrderDto: UpdateOrderDto) {
     await this.findOne(id);
     await this.repository.update(id, {
-      ...UpdateCategoryDto,
+      ...updateOrderDto,
       updated_at: new Date(Date.now()),
     });
     return {

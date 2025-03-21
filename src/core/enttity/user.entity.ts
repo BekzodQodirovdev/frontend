@@ -1,10 +1,11 @@
 import { BaseModel } from 'src/common/database';
+import { UserRole } from 'src/common/enum/user.enum';
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: 'users' })
 export class User extends BaseModel {
   @Column()
-  name: string;
+  fullname: string;
 
   @Column({ unique: true })
   email: string;
@@ -12,14 +13,11 @@ export class User extends BaseModel {
   @Column()
   password: string;
 
-  @Column()
-  role: string;
+  @Column({ type: 'enum', enum: UserRole, default: UserRole.USER })
+  role: UserRole;
 
   @Column({ nullable: true })
   avatar: string;
-
-  @Column({ unique: true })
-  username: string;
 
   @Column({ type: 'date', nullable: true })
   birth_of_date: Date;
@@ -30,6 +28,6 @@ export class User extends BaseModel {
   @Column({ default: true })
   is_active: boolean;
 
-  @Column({ type: 'timestamptz', nullable: true })
-  last_login: Date;
+  @Column()
+  refresh_token: string;
 }

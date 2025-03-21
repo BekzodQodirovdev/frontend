@@ -1,23 +1,24 @@
 import { HttpException, Injectable } from '@nestjs/common';
-import { CreateCategoryDto } from './dto/create-category.dto';
-import { UpdateCategoryDto } from './dto/update-category.dto';
+import { CreateCartItemDto } from './dto/create-cart_item.dto';
+import { UpdateCartItemDto } from './dto/update-cart_item.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Category } from 'src/core/enttity/categories.entity';
+import { CartItem } from 'src/core/enttity/cart_item.entity';
 import { Repository } from 'typeorm';
 
 @Injectable()
-export class CategoryService {
+export class CartItemService {
   constructor(
-    @InjectRepository(Category)
-    private readonly repository: Repository<Category>,
+    @InjectRepository(CartItem)
+    private readonly repository: Repository<CartItem>,
   ) {}
-  async create(createCategoryDto: CreateCategoryDto) {
-    const createCategory = this.repository.create(createCategoryDto);
-    const saveCategory = await this.repository.save(createCategory);
+
+  async create(createCartItemDto: CreateCartItemDto) {
+    const createPrd = this.repository.create(createCartItemDto);
+    const saveProduct = await this.repository.save(createPrd);
     return {
       status_code: 201,
       message: 'success',
-      saveCategory,
+      data: saveProduct,
     };
   }
 
@@ -47,10 +48,10 @@ export class CategoryService {
     };
   }
 
-  async update(id: string, updateCategoryDto: UpdateCategoryDto) {
+  async update(id: string, updateCartItemDto: UpdateCartItemDto) {
     await this.findOne(id);
     await this.repository.update(id, {
-      ...updateCategoryDto,
+      ...updateCartItemDto,
       updated_at: new Date(Date.now()),
     });
     return {

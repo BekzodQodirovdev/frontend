@@ -1,38 +1,32 @@
 import {
   IsString,
   IsEmail,
-  IsNotEmpty,
   IsOptional,
   IsBoolean,
-  IsDate,
+  IsEnum,
+  IsDateString,
 } from 'class-validator';
+import { UserRole } from 'src/common/enum/user.enum';
 
 export class CreateUserDto {
   @IsString()
-  @IsNotEmpty()
-  name: string;
+  fullname: string;
 
   @IsEmail()
-  @IsNotEmpty()
   email: string;
 
   @IsString()
-  @IsNotEmpty()
   password: string;
 
-  @IsString()
-  role: string;
+  @IsEnum(UserRole)
+  role: UserRole;
 
   @IsOptional()
   @IsString()
   avatar?: string;
 
-  @IsString()
-  @IsNotEmpty()
-  username: string;
-
   @IsOptional()
-  @IsDate()
+  @IsDateString()
   birth_of_date?: Date;
 
   @IsOptional()
@@ -41,4 +35,7 @@ export class CreateUserDto {
 
   @IsBoolean()
   is_active: boolean;
+
+  @IsString()
+  refresh_token: string;
 }

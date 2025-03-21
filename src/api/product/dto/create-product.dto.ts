@@ -1,18 +1,15 @@
 import {
   IsString,
-  IsNotEmpty,
   IsOptional,
   IsNumber,
+  IsPositive,
+  IsInt,
+  IsBoolean,
 } from 'class-validator';
 
 export class CreateProductDto {
-  @IsNumber()
-  @IsNotEmpty()
-  categoryId: number;
-
   @IsString()
-  @IsNotEmpty()
-  title: string;
+  name: string;
 
   @IsOptional()
   @IsString()
@@ -20,21 +17,16 @@ export class CreateProductDto {
 
   @IsOptional()
   @IsString()
-  summary?: string;
-
-  @IsOptional()
-  @IsString()
   description?: string;
 
   @IsNumber()
-  @IsNotEmpty()
+  @IsPositive()
   price: number;
 
-  @IsOptional()
-  @IsString()
-  discount_type?: string;
+  @IsInt()
+  @IsPositive()
+  quentity: number;
 
-  @IsOptional()
-  @IsNumber()
-  discount_value?: number;
+  @IsBoolean()
+  is_active: boolean;
 }

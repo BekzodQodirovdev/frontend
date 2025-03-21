@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from '../config/index';
-import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/user.module';
 import { ProductModule } from './product/product.module';
-import { CategoryModule } from './category/category.module';
-import { AddressModule } from './address/address.module';
+import { OrderModule } from './order/order.module';
+import { CartModule } from './cart/cart.module';
+import { CartItemModule } from './cart_item/cart_item.module';
 
 @Module({
   imports: [
@@ -19,10 +20,11 @@ import { AddressModule } from './address/address.module';
       synchronize: true,
       entities: ['dist/core/entity/*.entity{.ts,.js}'],
     }),
-    UserModule,
+    AuthModule,
     ProductModule,
-    CategoryModule,
-    AddressModule,
+    OrderModule,
+    CartModule,
+    CartItemModule,
   ],
   providers: [],
 })
