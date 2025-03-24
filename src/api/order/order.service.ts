@@ -12,8 +12,11 @@ export class OrderService {
     private readonly repository: Repository<Order>,
   ) {}
 
-  async create(createOrderDto: CreateOrderDto) {
-    const createPrd = this.repository.create(createOrderDto);
+  async create(createOrderDto: CreateOrderDto, userId: string) {
+    const createPrd = this.repository.create({
+      ...createOrderDto,
+      userId,
+    });
     const saveProduct = await this.repository.save(createPrd);
     return {
       status_code: 201,
@@ -24,7 +27,7 @@ export class OrderService {
 
   async findAll() {
     try {
-      const data = await this.repository.find();
+      const data = await this.repository.find({ relations: ['cart'] });
       return {
         status_code: 200,
         message: 'success',

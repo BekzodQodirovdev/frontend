@@ -11,7 +11,7 @@ export class Product extends BaseModel {
   @Column()
   name: string;
 
-  @Column({ nullable: true })
+  @Column()
   picture: string;
 
   @Column({ type: 'text', nullable: true })

@@ -28,6 +28,6 @@ export class User extends BaseModel {
   @Column({ default: true })
   is_active: boolean;
 
-  @Column()
+  @Column({ nullable: true })
   refresh_token: string;
 }

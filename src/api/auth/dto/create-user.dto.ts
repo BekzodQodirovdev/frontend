@@ -18,9 +18,6 @@ export class CreateUserDto {
   @IsString()
   password: string;
 
-  @IsEnum(UserRole)
-  role: UserRole;
-
   @IsOptional()
   @IsString()
   avatar?: string;
@@ -32,10 +29,4 @@ export class CreateUserDto {
   @IsOptional()
   @IsString()
   phone_number?: string;
-
-  @IsBoolean()
-  is_active: boolean;
-
-  @IsString()
-  refresh_token: string;
 }

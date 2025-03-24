@@ -11,9 +11,8 @@ export class CreateProductDto {
   @IsString()
   name: string;
 
-  @IsOptional()
   @IsString()
-  picture?: string;
+  picture: string;
 
   @IsOptional()
   @IsString()
