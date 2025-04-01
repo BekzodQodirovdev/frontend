@@ -17,6 +17,7 @@ export class Application {
         forbidNonWhitelisted: true,
       }),
     );
+
     app.enableCors({
       origin: '*',
       methods: 'GET,POST,PUT,DELETE',

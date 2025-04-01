@@ -1,6 +1,7 @@
 import {
   BadRequestException,
   ForbiddenException,
+  HttpException,
   Injectable,
 } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
@@ -12,6 +13,7 @@ import { BcryptManage } from 'src/infrastructure/bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { loginDto } from './dto/loginDto.dto';
 import { config } from 'src/config';
+import { EmailService } from '../email/email.service';
 
 @Injectable()
 export class UserService {
@@ -20,6 +22,7 @@ export class UserService {
     private readonly repository: Repository<User>,
     private readonly bcryptManage: BcryptManage,
     private readonly jwtService: JwtService,
+    private readonly emailService: EmailService,
   ) {}
 
   async register(createUserDto: CreateUserDto) {
@@ -37,11 +40,24 @@ export class UserService {
       );
 
       const createdUser = this.repository.create(createUserDto);
-      const { password, ...newUser } = await this.repository.save(createdUser);
+      const payload = {
+        sub: createdUser.id,
+        login: createdUser.email,
+        role: createdUser.role,
+        is_active: createdUser.is_active,
+      };
+      const refreshToken = this.jwtService.sign(payload, {
+        secret: config.REFRESH_TOKEN_KEY,
+        expiresIn: config.REFRESH_TOKEN_TIME,
+      });
+      createdUser.refresh_token = refreshToken;
+      this.emailService.otpSend(createdUser.email, refreshToken);
+      const { password, refresh_token, ...newUser } =
+        await this.repository.save(createdUser);
 
       return {
         status_code: 201,
-        message: 'Success',
+        message: 'Activation code sent to email',
         data: newUser,
       };
     } catch (error) {
@@ -94,12 +110,29 @@ export class UserService {
 
       return {
         accessToken,
-        refreshToken,
         store,
       };
     } catch (error) {
       console.error('Login Error:', error);
       throw new BadRequestException(error.message || 'Something went wrong');
     }
+  }
+
+  async verify(id: string) {
+    let userData = await this.repository.findOne({
+      where: { refresh_token: id },
+    });
+    if (userData?.is_active) {
+      return {
+        message: 'Already activated',
+      };
+    }
+    if (!userData) {
+      throw new HttpException('Not found', 404);
+    }
+    await this.repository.update(userData.id, { is_active: true });
+    return {
+      message: 'Success activated',
+    };
   }
 }

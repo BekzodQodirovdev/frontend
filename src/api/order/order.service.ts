@@ -12,10 +12,10 @@ export class OrderService {
     private readonly repository: Repository<Order>,
   ) {}
 
-  async create(createOrderDto: CreateOrderDto, userId: string) {
+  async create(createOrderDto: CreateOrderDto, id: string) {
     const createPrd = this.repository.create({
+      user: { id },
       ...createOrderDto,
-      userId,
     });
     const saveProduct = await this.repository.save(createPrd);
     return {

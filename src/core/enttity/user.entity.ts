@@ -1,6 +1,8 @@
 import { BaseModel } from 'src/common/database';
 import { UserRole } from 'src/common/enum/user.enum';
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, OneToMany } from 'typeorm';
+import { Order } from './order.entity';
+import { Address } from './address.entity';
 
 @Entity({ name: 'users' })
 export class User extends BaseModel {
@@ -25,9 +27,15 @@ export class User extends BaseModel {
   @Column({ nullable: true })
   phone_number: string;
 
-  @Column({ default: true })
+  @Column({ default: false })
   is_active: boolean;
 
   @Column({ nullable: true })
   refresh_token: string;
+
+  @OneToMany(() => Order, (order) => order.user)
+  orders: Order[];
+
+  @OneToMany(() => Address, (address) => address.user)
+  addresses: Address[];
 }

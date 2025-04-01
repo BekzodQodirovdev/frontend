@@ -1,31 +1,52 @@
 import {
+  IsNotEmpty,
   IsString,
-  IsOptional,
   IsNumber,
-  IsPositive,
-  IsInt,
-  IsBoolean,
+  IsOptional,
+  IsArray,
+  IsUUID,
+  IsEnum,
 } from 'class-validator';
+import { ProductSizeE } from 'src/common/enum/productSize.enum';
 
 export class CreateProductDto {
+  @IsNotEmpty()
+  @IsString()
+  sku: string;
+
+  @IsNotEmpty()
   @IsString()
   name: string;
 
+  @IsNotEmpty()
   @IsString()
-  picture: string;
+  shortDescription: string;
 
-  @IsOptional()
+  @IsNotEmpty()
   @IsString()
-  description?: string;
+  description: string;
 
+  @IsNotEmpty()
   @IsNumber()
-  @IsPositive()
   price: number;
 
-  @IsInt()
-  @IsPositive()
-  quentity: number;
+  @IsOptional()
+  @IsNumber()
+  stockQuantity?: number;
 
-  @IsBoolean()
-  is_active: boolean;
+  @IsNotEmpty()
+  @IsUUID()
+  categoryId: string;
+
+  @IsArray()
+  @IsEnum(ProductSizeE, { each: true })
+  sizes: ProductSizeE[];
+
+  @IsArray()
+  @IsString({ each: true })
+  tags: string[];
+
+  @IsArray()
+  @IsString({ each: true })
+  picture: string[];
 }

@@ -3,15 +3,10 @@ import { UserService } from './user.service';
 import { UserController } from './user.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/core/enttity/user.entity';
-import { BcryptManage } from 'src/infrastructure/bcrypt';
-import { JwtModule } from '@nestjs/jwt';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([User]),
-    JwtModule.register({ global: true }),
-  ],
+  imports: [TypeOrmModule.forFeature([User])],
   controllers: [UserController],
-  providers: [UserService, BcryptManage],
+  providers: [UserService],
 })
-export class AuthModule {}
+export class UserModule {}
