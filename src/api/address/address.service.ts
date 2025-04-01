@@ -17,8 +17,6 @@ export class AddressService {
     try {
       const newAddress = this.repository.create({
         ...createAddressDto,
-        created_at: new Date(),
-        updated_at: new Date()
       });
       const savedAddress = await this.repository.save(newAddress);
       return {
@@ -29,7 +27,7 @@ export class AddressService {
     } catch (error) {
       throw new HttpException(
         'Failed to create address',
-        HttpStatus.INTERNAL_SERVER_ERROR
+        HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
@@ -45,7 +43,7 @@ export class AddressService {
         where,
         skip,
         take: limit,
-        relations: ['user']
+        relations: ['user'],
       });
 
       return {
@@ -62,7 +60,7 @@ export class AddressService {
     } catch (error) {
       throw new HttpException(
         'Failed to retrieve addresses',
-        HttpStatus.INTERNAL_SERVER_ERROR
+        HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
@@ -71,14 +69,11 @@ export class AddressService {
     try {
       const address = await this.repository.findOne({
         where: { id },
-        relations: ['user']
+        relations: ['user'],
       });
 
       if (!address) {
-        throw new HttpException(
-          'Address not found',
-          HttpStatus.NOT_FOUND
-        );
+        throw new HttpException('Address not found', HttpStatus.NOT_FOUND);
       }
 
       return {
@@ -92,7 +87,7 @@ export class AddressService {
       }
       throw new HttpException(
         'Failed to retrieve address',
-        HttpStatus.INTERNAL_SERVER_ERROR
+        HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
@@ -102,7 +97,7 @@ export class AddressService {
       await this.findOne(id); // Check if exists
       await this.repository.update(id, {
         ...updateAddressDto,
-        updated_at: new Date()
+        updated_at: new Date(),
       });
       const updatedAddress = await this.repository.findOne({ where: { id } });
       return {
@@ -116,7 +111,7 @@ export class AddressService {
       }
       throw new HttpException(
         'Failed to update address',
-        HttpStatus.INTERNAL_SERVER_ERROR
+        HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }
@@ -136,34 +131,7 @@ export class AddressService {
       }
       throw new HttpException(
         'Failed to delete address',
-        HttpStatus.INTERNAL_SERVER_ERROR
-      );
-    }
-  }
-
-  async setDefaultAddress(userId: string, addressId: string) {
-    try {
-      // Reset all addresses to non-default first
-      await this.repository.update(
-        { user: { id: userId } },
-        { isDefault: false }
-      );
-
-      // Set the selected address as default
-      await this.repository.update(
-        { id: addressId, user: { id: userId } },
-        { isDefault: true }
-      );
-
-      return {
-        status: HttpStatus.OK,
-        message: 'Default address set successfully',
-        data: null,
-      };
-    } catch (error) {
-      throw new HttpException(
-        'Failed to set default address',
-        HttpStatus.INTERNAL_SERVER_ERROR
+        HttpStatus.INTERNAL_SERVER_ERROR,
       );
     }
   }

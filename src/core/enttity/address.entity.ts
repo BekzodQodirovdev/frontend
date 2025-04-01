@@ -1,9 +1,4 @@
-import {
-  Entity,
-  Column,
-  ManyToOne,
-  OneToMany,
-} from 'typeorm';
+import { Entity, Column, ManyToOne, OneToMany } from 'typeorm';
 import { User } from './user.entity';
 import { Order } from './order.entity';
 import { BaseModel } from 'src/common/database';
@@ -30,9 +25,6 @@ export class Address extends BaseModel {
 
   @Column()
   zipCode: string;
-
-  @Column({ default: false })
-  isDefault: boolean;
 
   @OneToMany(() => Order, (order) => order.billingAddress)
   billingOrders: Order[];
